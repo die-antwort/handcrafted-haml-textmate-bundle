@@ -5,20 +5,31 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>perl -pe 's/[\$`\\]/\\$&amp;/g; s/([ \t]*)(.+)/$1&lt;\${1:li}&gt;$2&lt;\/\${1\/\\s.*\/\/}&gt;/'</string>
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+perl -pe 's/[\$`\\]/\\$&amp;/g; s/([ \t]*)(.+)/$1&lt;\${1:li}&gt;$2&lt;\/\${1\/\\s.*\/\/}&gt;/'</string>
 	<key>fallbackInput</key>
 	<string>line</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^@W</string>
 	<key>name</key>
 	<string>Wrap Each Selected Line in Open/Close Tag</string>
-	<key>output</key>
-	<string>insertAsSnippet</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>scope</key>
-	<string>text.html,text.haml</string>
+	<string>text.haml</string>
 	<key>uuid</key>
 	<string>61F200F5-2BDF-477B-AB96-DC3D2D2BF0D3</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
