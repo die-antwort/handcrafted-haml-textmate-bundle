@@ -4,8 +4,6 @@
 <dict>
 	<key>content</key>
 	<string>= "${1:Lorem ipsum...}"</string>
-	<key>keyEquivalent</key>
-	<string>^L</string>
 	<key>name</key>
 	<string>" ... "</string>
 	<key>scope</key>
